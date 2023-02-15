@@ -238,10 +238,10 @@
             lengthMenu: [10, 20, 50, 100, 200, 500, 1e3, 2e3],
             ajax: {
                 url: "https://broadinstitute.github.io/omim-search-p/d",
-                //headers: {"Accept-Encoding": "gzip, deflate, compress"},
-                beforeSend: function (e) {
-                    e.setRequestHeader("Accept-Encoding", "gzip, deflate, compress")
-                },
+                headers: {"Accept-Encoding": "gzip, deflate, compress"},
+                //beforeSend: function (e) {
+                //    e.setRequestHeader("Accept-Encoding", "gzip, deflate, compress")
+                //},
                 dataSrc: function (e) {
                     return JSON.parse(atob(e[0])).data
                 }
