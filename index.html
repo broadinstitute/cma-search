@@ -243,6 +243,9 @@
                 //    e.setRequestHeader("Accept-Encoding", "gzip, deflate, compress")
                 //},
                 dataSrc: function (e) {
+                    console.log('e:', e);
+                    console.log('e[0]:', e[0]);
+                    console.log('atob(e[0]):', atob(e[0]));
                     return JSON.parse(atob(e[0])).data
                 }
             },
